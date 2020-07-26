@@ -1,7 +1,7 @@
 'use strict';
 
 describe('Angular Debounce Click directive test cases', function () {
-	var $scope, directiveElem,myInterval, myTimeout,directiveDefaultElem;
+	var $scope, directiveElem, myInterval, myTimeout, directiveDefaultElem;
 
 	beforeEach(module('ngDebounceClick'));
 
@@ -9,16 +9,16 @@ describe('Angular Debounce Click directive test cases', function () {
 		$scope = _$rootScope_;
 		myTimeout = _$timeout_;
 		var element = angular.element('<input type="button" ng-debounce-click="myExpensiveFunction()" ng-debounce-options=\'{"time":700}\' value="Click Me">');
-    var defaultElement = angular.element('<input type="button" ng-debounce-click="myExpensiveFunction()"  value="Click Me">');
+		var defaultElement = angular.element('<input type="button" ng-debounce-click="myExpensiveFunction()"  value="Click Me">');
 
-    $scope.$digest();
+		$scope.$digest();
 		$scope.count = 0;
 		$scope.myExpensiveFunction = function () {
 			$scope.count = $scope.count + 1;
 		}
 		directiveElem = $compile(element)($scope);
-    directiveDefaultElem = $compile(defaultElement)($scope);
-     $scope.$digest();
+		directiveDefaultElem = $compile(defaultElement)($scope);
+		$scope.$digest();
 	}));
 
 	describe('Debounce click event test cases', function () {
@@ -50,13 +50,13 @@ describe('Angular Debounce Click directive test cases', function () {
 
 	});
 
-  describe('Debounce click event option test cases', function () {
-    it('when ngDebounceOptions time is provided it should override default time', function () {
-      expect(JSON.parse(directiveElem.isolateScope().ngDebounceOptions).time).toBe(700)
-    });
+	describe('Debounce click event option test cases', function () {
+		it('when ngDebounceOptions time is provided it should override default time', function () {
+			expect(JSON.parse(directiveElem.isolateScope().ngDebounceOptions).time).toBe(700)
+		});
 
-    it('when ngDebounceOptions time is not provided it should take default time', function () {
-      expect(directiveDefaultElem.isolateScope().ngDebounceOptions.time).toBe(500)
-    });
-  });
+		it('when ngDebounceOptions time is not provided it should take default time', function () {
+			expect(directiveDefaultElem.isolateScope().ngDebounceOptions.time).toBe(500)
+		});
+	});
 });
