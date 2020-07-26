@@ -1,0 +1,38 @@
+{
+  "name": "ngdebounceclick",
+  "version": "1.0.1",
+  "description": "ng-debounce-click is the directive which is help to improve browser performance by reducing expensive/time consuming function invokation.",
+  "main": "ng-debounce-click.js",
+  "scripts": {
+    "test": "karma start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ddjain/ngDebounceClick.git"
+  },
+  "keywords": [
+    "angular",
+    "js",
+    "debouncing",
+    "click",
+    "event",
+    "ng",
+    "click"
+  ],
+  "author": "Darshan Jain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ddjain/ngDebounceClick/issues"
+  },
+  "homepage": "https://github.com/ddjain/ngDebounceClick#readme",
+  "dependencies": {
+    "angular": "1.8.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.8.0",
+    "jquery": "^2.0.3",
+    "karma": "5.1.0",
+    "karma-chrome-launcher": "3.1.0",
+    "karma-jasmine": "3.3.1"
+  }
+}
