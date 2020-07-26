@@ -33,6 +33,7 @@ HTML
 ```  
 ### ng-debounce-options
 - time: (miliseconds) function get called if no event is fire for given time.
+         Default time is 500ms
   
 ## Contributing
  
