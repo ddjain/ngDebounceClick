@@ -1,6 +1,6 @@
 {
   "name": "ngdebounceclick",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ng-debounce-click is the directive which is help to improve browser performance by reducing expensive/time consuming function invokation.",
   "main": "ng-debounce-click.js",
   "scripts": {
