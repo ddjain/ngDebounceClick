@@ -13,7 +13,7 @@ example:
 
 JS
 ```
-	// include the `ngLoad` module
+	// include the `ngDebounceClick` module
 	var app = angular.module('myApp', ['ngDebounceClick']);
 	app.controller('myCtrl', function($scope) {
 		$scope.myOnClickExpensiveFunction = function() {
